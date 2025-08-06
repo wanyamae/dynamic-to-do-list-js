@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Create a remove button for the task
 
-        const removeButton = document.createElement('remove');
+        const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
         removeButton.className = 'remove-btn';
 
@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Append the remive buttin to the list item
         li.appendChild(removBtn);
+
+        taskList.appendChild(li); // Append the list item to the task list
 
         // clear the input field
 
