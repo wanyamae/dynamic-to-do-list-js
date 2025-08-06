@@ -30,4 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-classList.add
+"classList.add"
