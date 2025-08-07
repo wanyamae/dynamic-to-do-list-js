@@ -8,9 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskList = document.getElementById('task-list');
 
 
+    function loadTasks() {
+        const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+        storedTasks.forEact(taskText => addTask(taskText, false)); // Load tasks from local storage
+    }
+
+
 
     // Function to add a new task to the list
-    function addTask() {
+    function addTask(taskText, save = true) {
 
         // Get and trim the input value
         const taskText = taskInput.value.trim();
@@ -37,6 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
             taskList.appendChild(li);
             // Clear the input field
             taskInput.value = '';
+        }
+
+        if (save) {
+            const storedTasks = JSON.parse(localStorage.getItem('tasks") || '[]));
+            storedTasks.push(taskText);
+            localStorage.setItem('tasks', JSON.stringify(storedTasks))
         }
     }
 
