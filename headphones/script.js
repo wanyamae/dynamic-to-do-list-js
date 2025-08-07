@@ -68,6 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Load tasks on page load
+    // Load tasks on page load loadTasks
     loadTasks();
 });
